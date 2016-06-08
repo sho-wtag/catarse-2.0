@@ -12597,3 +12597,822 @@ Processing by RewardsController#index as */*
   [1m[35mReward Load (0.3ms)[0m  SELECT "rewards".* FROM "rewards"  WHERE "rewards"."project_id" = $1  ORDER BY "rewards"."row_order" ASC  [["project_id", 2]]
   Rendered catarse_bootstrap/rewards/index.html.slim (4.8ms)
 Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.7ms)
+  [1m[36mCatarseSettingsDb::Setting Load (0.7ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (0.9ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[35mOauthProvider Load (0.6ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1
+
+
+Started GET "/pt/projects/2/edit" for 127.0.0.1 at 2016-06-08 15:05:19 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2", "locale"=>"pt"}
+  [1m[35mProject Load (1.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "project_posts"  WHERE "project_posts"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mReward Load (0.6ms)[0m  SELECT "rewards".* FROM "rewards"  WHERE "rewards"."project_id" = $1  ORDER BY "rewards"."row_order" ASC  [["project_id", 2]]
+  [1m[36mProjectAccount Load (0.6ms)[0m  [1mSELECT  "project_accounts".* FROM "project_accounts"  WHERE "project_accounts"."project_id" = $1 LIMIT 1[0m  [["project_id", 2]]
+  [1m[35mProject Load (2.5ms)[0m  SELECT DISTINCT "projects".* FROM "projects" INNER JOIN "contributions" ON "projects"."id" = "contributions"."project_id" WHERE (contributions.was_confirmed) AND "contributions"."user_id" = $1  ORDER BY projects.created_at DESC  [["user_id", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))[0m  [["user_id", 1]]
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" NOT IN ('rejected'))  ORDER BY "projects"."created_at" DESC LIMIT 3  [["user_id", 1]]
+  Rendered catarse_bootstrap/shared/_user_menu.html.slim (581.4ms)
+  Rendered catarse_bootstrap/shared/_header.html.slim (597.2ms)
+  [1m[36mProjectTotal Load (1.1ms)[0m  [1mSELECT  "project_totals".* FROM "project_totals"  WHERE "project_totals"."project_id" = $1 LIMIT 1[0m  [["project_id", 2]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered catarse_bootstrap/projects/_project_header.html.slim (42.5ms)
+  Rendered catarse_bootstrap/projects/dashboard_home_templates/_draft.html.slim (11.3ms)
+  Rendered catarse_bootstrap/projects/_dashboard_home.html.slim (15.9ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name_pt" ASC[0m
+  Rendered catarse_bootstrap/projects/_dashboard_basics.html.slim (252.7ms)
+  Rendered catarse_bootstrap/projects/_card.html.slim (27.7ms)
+  Rendered catarse_bootstrap/projects/_dashboard_project.html.slim (149.6ms)
+  Rendered catarse_bootstrap/projects/_reward_fields.html.slim (54.4ms)
+  Rendered catarse_bootstrap/projects/_reward_fields.html.slim (72.4ms)
+  Rendered catarse_bootstrap/projects/_dashboard_reward.html.slim (143.4ms)
+  [1m[35mUserLink Load (0.5ms)[0m  SELECT "user_links".* FROM "user_links"  WHERE "user_links"."user_id" = $1  [["user_id", 1]]
+  Rendered catarse_bootstrap/projects/_link_fields.html.slim (103.6ms)
+  Rendered catarse_bootstrap/projects/_link_fields.html.slim (104.9ms)
+  Rendered catarse_bootstrap/projects/_dashboard_user_about.html.slim (384.7ms)
+  Rendered layouts/_facebook_share.html.slim (8.0ms)
+  Rendered layouts/_twitter.html.erb (1.4ms)
+  Rendered catarse_bootstrap/projects/_budget.html.slim (5.6ms)
+  Rendered catarse_bootstrap/projects/_project_about.html.slim (37.6ms)
+  Rendered catarse_bootstrap/projects/_edit_action.html.slim (5.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))[0m  [["user_id", 1]]
+  [1m[35mUserTotal Load (0.2ms)[0m  SELECT  "user_totals".* FROM "user_totals"  WHERE "user_totals"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUserLink Load (0.2ms)[0m  [1mSELECT "user_links".* FROM "user_links"  WHERE "user_links"."user_id" = $1 AND (link IS NOT NULL)[0m  [["user_id", 1]]
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))  [["user_id", 1]]
+  Rendered catarse_bootstrap/users/_card.html.slim (41.8ms)
+  Rendered layouts/_facebook_share_mobile.html.slim (10.5ms)
+  Rendered catarse_bootstrap/layouts/_twitter_mobile.html.erb (3.1ms)
+  Rendered catarse_bootstrap/projects/_project_main.html.slim (146.2ms)
+  Rendered catarse_bootstrap/projects/_dashboard_preview.html.slim (158.6ms)
+  [1m[36mBank Load (1.6ms)[0m  [1mSELECT banks.code, banks.id, banks.name, count(bank_accounts.bank_id) as total FROM "banks" left join bank_accounts on bank_accounts.bank_id = banks.id GROUP BY banks.id, bank_accounts.bank_id  ORDER BY total DESC[0m
+  [1m[35m (0.9ms)[0m  SELECT "states"."name", "states"."acronym" FROM "states"   ORDER BY "states"."name" ASC
+  Rendered catarse_bootstrap/projects/_dashboard_user_settings.html.slim (1552.5ms)
+  Rendered catarse_bootstrap/shared/_footer.html.slim (17.8ms)
+  Rendered catarse_bootstrap/projects/edit.html.slim within layouts/catarse_bootstrap (3413.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_totals".* FROM "user_totals"  WHERE "user_totals"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))[0m  [["user_id", 1]]
+  [1m[35mProject Exists (0.3ms)[0m  SELECT  1 AS one FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online')) LIMIT 1  [["user_id", 1]]
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (8.1ms)
+  Rendered layouts/_facebook_sdk.html.slim (6.6ms)
+Completed 200 OK in 3893ms (Views: 3689.3ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/assets/catarse_bootstrap/fonts.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/catarse_bootstrap/catarse.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/redactor-rails/css/redactor.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/redactor-rails/index.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/redactor.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/catarse_bootstrap/user.jpg" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/jquery/dist/jquery.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/underscore/underscore.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:23 +0600
+
+
+Started GET "/assets/backbone/backbone.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery.fixedmask/dist/jquery.fixedmask.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery-ujs/src/rails.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jQuery-Mask-Plugin/dist/jquery.mask.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery-sticky/jquery.sticky.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery-smooth-scroll/jquery.smooth-scroll.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery-typewatch/jquery.typewatch.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/store/dist/store2.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/jquery.elastic.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/skull.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/jquery.brbanks.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/jquery.headline.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/jquery.payment.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/modal.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/pagination.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/show_password_input.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/tabs.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/twitter.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/lib/ui_helper.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/admin/admin.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/admin/admin_sort.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/contribution/contribution.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/contribution/contribution_form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/contribution/contribution_payment.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:24 +0600
+
+
+Started GET "/assets/app/contribution/contribution_review.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/explore.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/guides.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/hello.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/home.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/how_it_works.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/registration.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/reset_password.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/pages/search.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_comments.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_contributions.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_reward.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_user.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_edit.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_metrics.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_posts.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/project/project_sidebar.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/user/user.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/user/user_document.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/user/user_edit.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/user/user_menu.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/app/utils/mix_panel.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/redactor-rails/redactor.min.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:25 +0600
+
+
+Started GET "/assets/redactor-rails/langs/pt_br.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/assets/redactor-rails/video.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/assets/redactor-rails/config.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/assets/redactor.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/assets/catarse_bootstrap/loader.gif" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+
+
+Started GET "/pt/projects/2/rewards" for 127.0.0.1 at 2016-06-08 15:05:26 +0600
+Processing by RewardsController#index as */*
+  Parameters: {"project_id"=>"2", "locale"=>"pt"}
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mReward Load (0.4ms)[0m  SELECT "rewards".* FROM "rewards"  WHERE "rewards"."project_id" = $1  ORDER BY "rewards"."row_order" ASC  [["project_id", 2]]
+  Rendered catarse_bootstrap/rewards/index.html.slim (21.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pt/projects/2/edit?ref=user_menu_my_projects" for 127.0.0.1 at 2016-06-08 15:05:33 +0600
+Processing by ProjectsController#edit as HTML
+  Parameters: {"ref"=>"user_menu_my_projects", "id"=>"2", "locale"=>"pt"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "project_posts"  WHERE "project_posts"."project_id" = $1  [["project_id", 2]]
+  [1m[36mReward Load (0.4ms)[0m  [1mSELECT "rewards".* FROM "rewards"  WHERE "rewards"."project_id" = $1  ORDER BY "rewards"."row_order" ASC[0m  [["project_id", 2]]
+  [1m[35mProjectAccount Load (0.4ms)[0m  SELECT  "project_accounts".* FROM "project_accounts"  WHERE "project_accounts"."project_id" = $1 LIMIT 1  [["project_id", 2]]
+  [1m[36mProject Load (1.7ms)[0m  [1mSELECT DISTINCT "projects".* FROM "projects" INNER JOIN "contributions" ON "projects"."id" = "contributions"."project_id" WHERE (contributions.was_confirmed) AND "contributions"."user_id" = $1  ORDER BY projects.created_at DESC[0m  [["user_id", 1]]
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))  [["user_id", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" NOT IN ('rejected'))  ORDER BY "projects"."created_at" DESC LIMIT 3[0m  [["user_id", 1]]
+  Rendered catarse_bootstrap/shared/_user_menu.html.slim (15.6ms)
+  Rendered catarse_bootstrap/shared/_header.html.slim (19.7ms)
+  [1m[35mProjectTotal Load (1.0ms)[0m  SELECT  "project_totals".* FROM "project_totals"  WHERE "project_totals"."project_id" = $1 LIMIT 1  [["project_id", 2]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered catarse_bootstrap/projects/_project_header.html.slim (6.3ms)
+  Rendered catarse_bootstrap/projects/dashboard_home_templates/_draft.html.slim (1.8ms)
+  Rendered catarse_bootstrap/projects/_dashboard_home.html.slim (3.7ms)
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name_pt" ASC
+  Rendered catarse_bootstrap/projects/_dashboard_basics.html.slim (212.0ms)
+  Rendered catarse_bootstrap/projects/_card.html.slim (9.0ms)
+  Rendered catarse_bootstrap/projects/_dashboard_project.html.slim (193.7ms)
+  Rendered catarse_bootstrap/projects/_reward_fields.html.slim (42.3ms)
+  Rendered catarse_bootstrap/projects/_reward_fields.html.slim (52.8ms)
+  Rendered catarse_bootstrap/projects/_dashboard_reward.html.slim (106.5ms)
+  [1m[36mUserLink Load (0.5ms)[0m  [1mSELECT "user_links".* FROM "user_links"  WHERE "user_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered catarse_bootstrap/projects/_link_fields.html.slim (71.4ms)
+  Rendered catarse_bootstrap/projects/_link_fields.html.slim (74.8ms)
+  Rendered catarse_bootstrap/projects/_dashboard_user_about.html.slim (346.4ms)
+  Rendered layouts/_facebook_share.html.slim (0.5ms)
+  Rendered layouts/_twitter.html.erb (1.1ms)
+  Rendered catarse_bootstrap/projects/_budget.html.slim (0.6ms)
+  Rendered catarse_bootstrap/projects/_project_about.html.slim (7.8ms)
+  Rendered catarse_bootstrap/projects/_edit_action.html.slim (0.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))  [["user_id", 1]]
+  [1m[36mUserTotal Load (0.2ms)[0m  [1mSELECT  "user_totals".* FROM "user_totals"  WHERE "user_totals"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserLink Load (0.2ms)[0m  SELECT "user_links".* FROM "user_links"  WHERE "user_links"."user_id" = $1 AND (link IS NOT NULL)  [["user_id", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))[0m  [["user_id", 1]]
+  Rendered catarse_bootstrap/users/_card.html.slim (10.4ms)
+  Rendered layouts/_facebook_share_mobile.html.slim (4.3ms)
+  Rendered catarse_bootstrap/layouts/_twitter_mobile.html.erb (1.0ms)
+  Rendered catarse_bootstrap/projects/_project_main.html.slim (36.7ms)
+  Rendered catarse_bootstrap/projects/_dashboard_preview.html.slim (39.4ms)
+  [1m[35mBank Load (1.4ms)[0m  SELECT banks.code, banks.id, banks.name, count(bank_accounts.bank_id) as total FROM "banks" left join bank_accounts on bank_accounts.bank_id = banks.id GROUP BY banks.id, bank_accounts.bank_id  ORDER BY total DESC
+  Rendered catarse_bootstrap/projects/_dashboard_user_settings.html.slim (1668.4ms)
+  Rendered catarse_bootstrap/shared/_footer.html.slim (2.6ms)
+  Rendered catarse_bootstrap/projects/edit.html.slim within layouts/catarse_bootstrap (2622.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_totals".* FROM "user_totals"  WHERE "user_totals"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))[0m  [["user_id", 1]]
+  [1m[35mProject Exists (0.3ms)[0m  SELECT  1 AS one FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online')) LIMIT 1  [["user_id", 1]]
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (1.0ms)
+  Rendered layouts/_facebook_sdk.html.slim (1.1ms)
+Completed 200 OK in 2702ms (Views: 2682.9ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/assets/catarse_bootstrap/fonts.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/catarse_bootstrap/catarse.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/redactor-rails/css/redactor.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/redactor-rails/index.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/redactor.css?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/catarse_bootstrap/user.jpg" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery/dist/jquery.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/underscore/underscore.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/backbone/backbone.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery.fixedmask/dist/jquery.fixedmask.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery-ujs/src/rails.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jQuery-Mask-Plugin/dist/jquery.mask.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery-sticky/jquery.sticky.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery-smooth-scroll/jquery.smooth-scroll.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery-typewatch/jquery.typewatch.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/store/dist/store2.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/jquery.elastic.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/lib/skull.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/lib/form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:37 +0600
+
+
+Started GET "/assets/lib/jquery.brbanks.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/jquery.headline.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/jquery.payment.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/modal.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/pagination.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/show_password_input.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/tabs.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/twitter.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/lib/ui_helper.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/admin/admin.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/admin/admin_sort.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/contribution/contribution.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/contribution/contribution_form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/contribution/contribution_payment.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/explore.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/guides.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/contribution/contribution_review.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/hello.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/how_it_works.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/home.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/registration.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/reset_password.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/pages/search.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/project/project.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/project/project_comments.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/project/project_contributions.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_reward.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:38 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_user.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/project/project_edit.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/project/project_form.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/project/project_metrics.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/project/project_posts.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/project/project_sidebar.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/user/user.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/user/user_document.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/user/user_edit.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/user/user_menu.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/app/utils/mix_panel.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/redactor-rails/redactor.min.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/redactor-rails/langs/pt_br.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/redactor-rails/video.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/redactor-rails/config.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/redactor.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/assets/catarse_bootstrap/loader.gif" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+
+
+Started GET "/pt/projects/2/rewards" for 127.0.0.1 at 2016-06-08 15:05:39 +0600
+Processing by RewardsController#index as */*
+  Parameters: {"project_id"=>"2", "locale"=>"pt"}
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mReward Load (0.3ms)[0m  SELECT "rewards".* FROM "rewards"  WHERE "rewards"."project_id" = $1  ORDER BY "rewards"."row_order" ASC  [["project_id", 2]]
+  Rendered catarse_bootstrap/rewards/index.html.slim (5.3ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.2ms)
+  [1m[36mCatarseSettingsDb::Setting Load (0.6ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (0.5ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[36mCatarseSettingsDb::Setting Load (0.6ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (0.6ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[35mOauthProvider Load (0.3ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1
+  [1m[35mOauthProvider Load (0.3ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1
+  [1m[36mProjectNotification Load (1.2ms)[0m  [1mSELECT  "project_notifications".* FROM "project_notifications"  WHERE "project_notifications"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "project_notifications" SET "sent_at" = $1, "updated_at" = $2 WHERE "project_notifications"."id" = 2[0m  [["sent_at", "2016-06-08 09:13:14.695322"], ["updated_at", "2016-06-08 09:13:14.696343"]]
+  [1m[35m (77.5ms)[0m  COMMIT
+  Rendered catarse_bootstrap/user_notifier/mailer/project_received_subject.text.slim (16.4ms)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (1.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCatarseSettingsDb::Setting Load (0.7ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1[0m
+  Rendered catarse_bootstrap/user_notifier/mailer/project_received.html.slim within layouts/email (45.6ms)
+  Rendered catarse_bootstrap/layouts/_mailer_styles.html.erb (2.0ms)
+
+UserNotifier::Mailer#notify: processed outbound mail in 525.0ms
+
+Sent mail to admin@admin.com (90.8ms)
+Date: Wed, 08 Jun 2016 15:13:15 +0600
+From: Catarse <system@catarse.me>
+Reply-To: Catarse <projetos@catarse.me>
+To: admin@admin.com
+Message-ID: <5757e1ab4f4ff_51662e8e584307b5@dihan-A960G.mail>
+Subject: O seu rascunho de projeto foi criado no Catarse
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Ty=
+pe" />
+    <meta content=3D"O seu rascunho de projeto foi criado no Catarse" pro=
+perty=3D"og:title" />
+    <title>O seu rascunho de projeto foi criado no Catarse</title><style =
+type=3D'text/css'>
+      .button {
+        color:#ffffff;
+        display:inline-block;
+        font-family:'Helvetica',Arial,sans-serif;
+        width:auto;
+        white-space:nowrap;
+        min-height:32px;
+        margin:5px 5px 0 0;
+        padding:0 22px;
+        text-decoration:none;
+        text-align:center;
+        font-weight:bold;
+        font-style:normal;
+        font-size:15px;
+        line-height:32px;
+        border:0;
+        border-radius:4px;
+        vertical-align:top;
+        background-color:#00cb33
+      }
+      table{
+        table-layout: fixed; =
+
+      }
+      img{
+        max-width: 100%;
+      }
+    </style>
+    =
+
+  </head>
+  <body leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0" offset=3D"0=
+" topmargin=3D"0">
+    <div style=3D"font:14px/20px &#39;Helvetica&#39;,Arial,sans-serif;mar=
+gin:0;padding:75px 0;text-align:center;background-color:#f8f8f7;">
+      <center>
+        <table border=3D"0" cellpadding=3D"10" cellspacing=3D"0" style=3D=
+"background-color:#f8f8f7;width:100%;height:100%;">
+          <tbody>
+            <tr>
+              <td align=3D"center" valign=3D"top">
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"border-radius:6px;background-color:#ffffff;width:600px;">
+                  <tbody>
+                    <tr>
+                      <td align=3D"center" valign=3D"top">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px;">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <h1 style=3D"margin: 0; padding: 0;">
+                                  <div style=3D"text-align:center"><a hre=
+f=3D"http://catarse.me" style=3D"color:#f69219" target=3D"_blank"><img al=
+t=3D"Catarse" border=3D"0" height=3D"121" src=3D"https://gallery.mailchim=
+p.com/ebfcd0d16dbb0001a0bea3639/images/logo_notificacoes_div3.png" width=3D=
+"600" /></a>
+                                  </div>
+                                </h1>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align=3D"center" valign=3D"top">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-radius:6px;background-color:#ffffff;width:600px;">=
+
+                          <tbody>
+                            <tr>
+                              <td align=3D"left" style=3D"line-height:150=
+%;font-family:Helvetica;font-size:13px;color:#3f4652;padding:30px" valign=
+=3D"top">
+                                <p dir=3D"ltr" style=3D"padding:0 0 10px =
+0">
+                                  Ol=C3=A1, !<br /><br />Obrigado por ini=
+ciar o processo de inscri=C3=A7=C3=A3o de um projeto no Catarse! <br />Sa=
+iba que recebemos sua inscri=C3=A7=C3=A3o! <br /><br />Voc=C3=AA acabou d=
+e criar a p=C3=A1gina de rascunho do projeto <a href=3D"http://localhost:=
+3000/pt/projects/2/edit">Project synosis</a> no Catarse. <br /><br /><str=
+ong>=C3=89 hora de trabalhar na apresenta=C3=A7=C3=A3o do seu projeto!</s=
+trong><br />Seu projeto est=C3=A1 no Catarse como um rascunho, ou seja, n=
+=C3=A3o est=C3=A1 p=C3=BAblico. Voc=C3=AA pode enviar o link acima para o=
+utras pessoas visualizarem a p=C3=A1gina e te ajudarem com cr=C3=ADticas =
+e sugest=C3=B5es. <br /><br /><strong>Ningu=C3=A9m poder=C3=A1  apoiar o =
+seu projeto at=C3=A9 que ele seja aprovado e a campanha esteja no ar.</st=
+rong><br />Para avan=C3=A7ar para essas etapas voc=C3=AA deve completar t=
+oda a p=C3=A1gina de rascunho do seu projeto e envi=C3=A1-la para nossa a=
+n=C3=A1lise. Quando considerar que a sua p=C3=A1gina est=C3=A1 pronta, ba=
+sta clicar no bot=C3=A3o =E2=80=9CENVIAR=E2=80=9D.<br /><br /><img alt=3D=
+"Btn send to analysis" src=3D"https://s3.amazonaws.com/cdn.catarse/notifi=
+cations_assets/btn-send-to-analysis.gif" width=3D"600" /><br /><br />Depo=
+is disso, a equipe do Catarse vai avaliar se o projeto est=C3=A1 de acord=
+o com os crit=C3=A9rios da plataforma e te enviar=C3=A1 uma resposta (par=
+a este e-mail mesmo) em at=C3=A9 4 dias =C3=BAteis!<br /><br />Se ficou c=
+om alguma d=C3=BAvida, responda a esta mensagem ou envie um email para <a=
+ href=3D"mailto:projetos@catarse.me">projetos@catarse.me</a><br /><br />E=
+ por falar nisso, por favor <strong>n=C3=A3o esque=C3=A7a de incluir na s=
+ua lista de contatos os e-mails:</strong> <a href=3D"mailto:projetos@cata=
+rse.me">projetos@catarse.me</a> e <a href=3D"mailto:contato@catarse.me">c=
+ontato@catarse.me</a> para evitar que nossas mensagens caiam na sua caixa=
+ de spam devido a filtros do seu email. <br /><br />Um abra=C3=A7o,<br />=
+Catarse
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+  </body>
+</html>=
+
