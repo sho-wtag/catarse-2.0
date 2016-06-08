@@ -1,0 +1,49 @@
+- project = @notification.project
+| Solicitação de análise do projeto: #{project.name}
+br/
+| Frase de efeito: #{project.headline}
+br/
+| Tempo de preparo: #{distance_of_time_in_words(project.created_at, project.sent_to_analysis_at)}
+br/
+br/
+strong SOBRE O PROJETO
+br/
+br/
+| Link: #{link_to project_by_slug_url(project.permalink), project_by_slug_url(project.permalink)}
+br/
+| Categoria: #{link_to project.category, explore_url(anchor: "by_category/#{project.category_id}")}
+br/
+| Valor da meta: #{number_to_currency project.goal}
+br/
+br/
+strong SOBRE O REALIZADOR
+br/
+br/
+| Nome: #{project.user.name}
+br/
+| Email: #{project.user.email}
+br/
+| Telefone: #{project.user.phone_number}
+br/
+| Links: 
+br/
+- project.user.links.each do |link|
+  = link.link
+  br/
+= project.user.facebook_link
+br/
+= project.user.decorate.twitter_link
+br/
+| Projetos Apoiados: #{project.user.total_contributed_projects}
+br/
+| Projetos Financiados: #{project.user.projects.with_state('successful').count}
+br/
+| Projetos Não financiados: #{project.user.projects.with_state('failed').count}
+br/
+| Projetos Em Rascunho: #{project.user.projects.with_state('draft').count}
+br/
+| Projetos Em Análise: #{project.user.projects.with_state('in_analysis').count} 
+br/
+| Projetos Aprovados: #{project.user.projects.with_state('approved').count}
+br/
+| Projetos Recusados: #{project.user.projects.with_state('rejected').count} 
