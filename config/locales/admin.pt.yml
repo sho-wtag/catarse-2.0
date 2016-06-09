@@ -94,7 +94,7 @@ pt:
         total_credits: créditos
         total_credits_view: créditos calculados
         user: Usuário
-        value: Valor
+        salary: salário
         payer_email: Email do pagamento
         provider: Provedor
     contributions:
@@ -175,7 +175,7 @@ pt:
         total_contribution: apoios
         total_users: usuários
         user: Usuário
-        value: Valor
+        salary: salário
     statistics:
       index:
         menu: "Estatísticas"

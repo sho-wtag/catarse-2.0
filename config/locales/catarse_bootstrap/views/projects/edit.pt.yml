@@ -4,7 +4,7 @@ pt:
       edit: "Editar recompensa"
       reward: Recompensa
       info_box: "Descreva o valor da recompensa e coloque uma previsão de data de entrega real para os apoiadores. Você também pode limitar uma recompensa e quando o limite é atingido ela aparece como ESGOTADA. Se quiser mudar a ordem que as recompensas aparecem em seu projeto, basta fazer isso arrastando-as para cima ou para baixo."
-      minimum_value: "Valor:"
+      minimum_value: "Salary:"
       deliver_at: "Previsão de entrega:"
       description: "Descrição:"
       limit_reward: "Limitar recompensa"

@@ -56,8 +56,9 @@ nav.w-dropdown-list.dropdown-list.user-menu
     .fontweight-semibold.fontsize-smaller.u-marginbottom-10 Admin
     ul.w-list-unstyled.u-marginbottom-20
       - for menu, path in controller.menu do
-        li.lineheight-looser
-          = link_to menu, path, class: 'alt-link fontsize-smaller'
+        -if menu != "Rel. Financeiros"
+          li.lineheight-looser
+            = link_to menu, path, class: 'alt-link fontsize-smaller'
 
   .divider.u-marginbottom-20
   .fontsize-smallest
