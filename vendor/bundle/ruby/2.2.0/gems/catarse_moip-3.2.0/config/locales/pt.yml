@@ -1,0 +1,25 @@
+pt:
+  projects:
+    contributions:
+      review:
+        moip: 'Pagamento nacional'
+        form:
+          labels:
+            payment_account: 'Debito em Conta'
+            document: 'CPF/CNPJ (somente números)'
+            payment_card: 'Pagamento com Cartão'
+            owner_card: "Dados do titular do cartão"
+            number_card: "Dados do cartão"
+            payment_boleto: "Pagamento com Boleto"
+            payment_boleto_subtitle: "Clique no link abaixo para ver o boleto:"
+            select_boleto: "Para prosseguir, por favor selecione:"
+            select_account: "Para prosseguir, por favor selecione o banco:"
+            payment_account: "Pagamento com Débito em Conta"
+            select_account: "Você será redirecionado para o site do seu banco:"
+            you_are_about_html: "Você está prestes a fazer parte do grupo que faz de tudo para o %{link} acontecer."
+            pay_with: "Pagar com"
+            submit: "Efetuar pagamento"
+            build_boleto: 'Gerar boleto'
+      checkout:
+        moip_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o MoIP. Por favor, tente novamente."
+        success: "Seu apoio foi realizado com sucesso. Muito obrigado!"

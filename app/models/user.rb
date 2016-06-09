@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   # :validatable
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :omniauthable
+    :recoverable, :rememberable, :trackable, :omniauthable, :validatable
 
   delegate  :display_name, :display_image, :short_name, :display_image_html,
     :medium_name, :display_credits, :display_total_of_contributions, :contributions_text,
@@ -32,6 +32,9 @@ class User < ActiveRecord::Base
   validates_presence_of :password, if: :password_required?
   validates_confirmation_of :password, if: :password_confirmation_required?
   validates_length_of :password, within: Devise.password_length, allow_blank: true
+  validates_presence_of :password_confirmation, if: :password_required?
+  validates_confirmation_of :password_confirmation, if: :password_confirmation_required?
+  validates_length_of :password_confirmation, within: Devise.password_length, allow_blank: true
 
   belongs_to :country
   has_one :user_total

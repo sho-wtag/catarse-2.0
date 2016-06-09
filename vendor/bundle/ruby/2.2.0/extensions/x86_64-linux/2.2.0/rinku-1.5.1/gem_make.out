@@ -1,0 +1,82 @@
+/home/dihan/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160608-26291-1lwds1w.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling buffer.c
+buffer.c: In function ‘bufprintf’:
+buffer.c:116:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int n;
+  ^
+compiling rinku.c
+rinku.c: In function ‘rinku_autolink’:
+rinku.c:257:19: warning: pointer targets in passing argument 2 of ‘print_link’ differ in signedness [-Wpointer-sign]
+    print_link(ob, link->data, link->size);
+                   ^
+rinku.c:87:13: note: expected ‘const char *’ but argument is of type ‘uint8_t * {aka unsigned char *}’
+ static void print_link(struct buf *ob, const char *link, size_t size)
+             ^
+rinku.c:197:9: warning: unused variable ‘link_url_cb’ [-Wunused-variable]
+  void (*link_url_cb)(struct buf *, const struct buf *, void *);
+         ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from rinku.c:19:
+rinku.c: In function ‘autolink_callback’:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:796:20: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+  rb_str_new_static((str), (len)) : \
+                    ^
+rinku.c:290:12: note: in expansion of macro ‘rb_str_new’
+  rb_link = rb_str_new(link->data, link->size);
+            ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:727:7: note: expected ‘const char *’ but argument is of type ‘uint8_t * const {aka unsigned char * const}’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:797:13: warning: pointer targets in passing argument 1 of ‘rb_str_new’ differ in signedness [-Wpointer-sign]
+  rb_str_new((str), (len));   \
+             ^
+rinku.c:290:12: note: in expansion of macro ‘rb_str_new’
+  rb_link = rb_str_new(link->data, link->size);
+            ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:706:7: note: expected ‘const char *’ but argument is of type ‘uint8_t * const {aka unsigned char * const}’
+ VALUE rb_str_new(const char*, long);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33:0,
+                 from rinku.c:19:
+rinku.c: In function ‘rb_rinku_autolink’:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:866:5: warning: pointer targets in passing argument 2 of ‘rinku_autolink’ differ in signedness [-Wpointer-sign]
+     (!(RBASIC(str)->flags & RSTRING_NOEMBED) ? \
+     ^
+rinku.c:426:3: note: in expansion of macro ‘RSTRING_PTR’
+   RSTRING_PTR(rb_text),
+   ^
+rinku.c:184:1: note: expected ‘const uint8_t * {aka const unsigned char *}’ but argument is of type ‘char *’
+ rinku_autolink(
+ ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from rinku.c:19:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:796:20: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+  rb_str_new_static((str), (len)) : \
+                    ^
+rinku.c:437:12: note: in expansion of macro ‘rb_str_new’
+   result = rb_str_new(output_buf->data, output_buf->size);
+            ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:727:7: note: expected ‘const char *’ but argument is of type ‘uint8_t * {aka unsigned char *}’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:797:13: warning: pointer targets in passing argument 1 of ‘rb_str_new’ differ in signedness [-Wpointer-sign]
+  rb_str_new((str), (len));   \
+             ^
+rinku.c:437:12: note: in expansion of macro ‘rb_str_new’
+   result = rb_str_new(output_buf->data, output_buf->size);
+            ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:706:7: note: expected ‘const char *’ but argument is of type ‘uint8_t * {aka unsigned char *}’
+ VALUE rb_str_new(const char*, long);
+       ^
+compiling autolink.c
+linking shared-object rinku.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rinku.so ./.gem.20160608-26291-qvgfo9

@@ -1,0 +1,608 @@
+have_library: checking for socket() in -lsocket... -------------------- no
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lsocket  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘socket’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lsocket  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘socket’ [-Wimplicit-function-declaration]
+ int t(void) { socket(); return 0; }
+               ^
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { socket(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for gethostbyname() in -lnsl... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘gethostbyname’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))gethostbyname; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))gethostbyname; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))gethostbyname; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘gethostbyname’ [-Wimplicit-function-declaration]
+ int t(void) { gethostbyname(); return 0; }
+               ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { gethostbyname(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for atan() in -lm... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))atan; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))atan; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for inflate() in -lz... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘inflate’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))inflate; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))inflate; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))inflate; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘inflate’ [-Wimplicit-function-declaration]
+ int t(void) { inflate(); return 0; }
+               ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { inflate(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for iconv_open() in -liconv... -------------------- no
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -liconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘iconv_open’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -liconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘iconv_open’ [-Wimplicit-function-declaration]
+ int t(void) { iconv_open(); return 0; }
+               ^
+/usr/bin/ld: cannot find -liconv
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { iconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for libiconv_open() in -liconv... -------------------- no
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -liconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘libiconv_open’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -liconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘libiconv_open’ [-Wimplicit-function-declaration]
+ int t(void) { libiconv_open(); return 0; }
+               ^
+/usr/bin/ld: cannot find -liconv
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { libiconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for libiconv_open() in -llibiconv... -------------------- no
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -llibiconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘libiconv_open’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))libiconv_open; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -llibiconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘libiconv_open’ [-Wimplicit-function-declaration]
+ int t(void) { libiconv_open(); return 0; }
+               ^
+/usr/bin/ld: cannot find -llibiconv
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { libiconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for iconv_open() in -llibiconv... -------------------- no
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -llibiconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘iconv_open’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -llibiconv -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘iconv_open’ [-Wimplicit-function-declaration]
+ int t(void) { iconv_open(); return 0; }
+               ^
+/usr/bin/ld: cannot find -llibiconv
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { iconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for iconv_open() in -lc... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lc -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘iconv_open’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lc -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘iconv_open’ [-Wimplicit-function-declaration]
+ int t(void) { iconv_open(); return 0; }
+               ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { iconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for xmlParseDoc() in -lxml2... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lc -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lxml2 -lc -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘xmlParseDoc’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lc -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lxml2 -lc -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:15: warning: implicit declaration of function ‘xmlParseDoc’ [-Wimplicit-function-declaration]
+ int t(void) { xmlParseDoc(); return 0; }
+               ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlParseDoc(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for libxml/xmlversion.h... -------------------- no
+
+"gcc -E -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  conftest.c -o conftest.i"
+conftest.c:3:31: fatal error: libxml/xmlversion.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+--------------------
+
+find_header: checking for libxml/xmlversion.h in /opt/include/libxml2,/usr/local/include/libxml2,/usr/include/libxml2... -------------------- yes
+
+"gcc -E -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  conftest.c -o conftest.i"
+conftest.c:3:31: fatal error: libxml/xmlversion.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+"gcc -E -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC -I/opt/include/libxml2 conftest.c -o conftest.i"
+conftest.c:3:31: fatal error: libxml/xmlversion.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+"gcc -E -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC -I/usr/local/include/libxml2 conftest.c -o conftest.i"
+conftest.c:3:31: fatal error: libxml/xmlversion.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+"gcc -E -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC -I/usr/include/libxml2 conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_io_bufwrite() in ruby/io.h... -------------------- yes
+
+"gcc -o conftest -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-linux -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/backward -I/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0 -I. -I/usr/include/libxml2     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lxml2 -lc -lz -lm -lnsl  -Wl,-R/home/dihan/.rvm/rubies/ruby-2.2.2/lib -L/home/dihan/.rvm/rubies/ruby-2.2.2/lib -lruby -lxml2 -lc -lz -lm -lnsl  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_bufwrite; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/io.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_bufwrite; return 0; }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+1: #ifndef EXTCONF_H
+2: #define EXTCONF_H
+3: #define HAVE_ZLIB_H 1
+4: #define HAVE_RB_IO_BUFWRITE 1
+5: #endif
+/* end */
+

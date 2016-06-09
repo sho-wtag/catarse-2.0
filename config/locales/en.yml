@@ -32,7 +32,7 @@ en:
     placeholder:
       email: "Email"
       password: "Password"
-
+      repassword: "Re-Enter Your Password"
   contribution_report_to_project_owner:
     reward_description: 'Reward description'
     confirmed_at: 'Payment confirmed at'

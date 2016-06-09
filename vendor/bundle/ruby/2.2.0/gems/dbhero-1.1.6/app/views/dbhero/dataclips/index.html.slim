@@ -1,0 +1,25 @@
+.container
+  .section
+    .row.style-text-field 
+      .input-field.col.s12
+        = form_tag dataclips_path, method: :get do
+          input#icon_prefix.validate name='search' type="text" value=params[:search] /
+          label for="icon_prefix" 
+            | search on all clips
+          i.mdi-action-search.prefix
+        
+    .row
+      .col.s2.center-align.right
+        span style='font-size: 16px; color: #9e9e9e;' updated at
+      .col.s12
+        ul.collection.z-depth-1
+          - @dataclips.each do |dataclip|
+            li.collection-item
+              .row style='margin-bottom: 0;'
+                .col.s12
+                  = link_to dataclip.title, edit_dataclip_path(dataclip)
+                  - if dataclip.user
+                    span style='font-size: 13px; font-weight: light; color: #607d8b;'
+                      | &nbsp; by #{dataclip.user}
+                  span.right style='font-size: 12px; font-weight: bold; color: #607d8b;'= distance_of_time_in_words(dataclip.updated_at, DateTime.now)
+

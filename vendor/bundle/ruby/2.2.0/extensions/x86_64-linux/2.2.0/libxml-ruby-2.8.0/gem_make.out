@@ -1,0 +1,839 @@
+/home/dihan/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160608-26291-18u6d32.rb extconf.rb
+checking for socket() in -lsocket... no
+checking for gethostbyname() in -lnsl... yes
+checking for atan() in -lm... yes
+checking for inflate() in -lz... yes
+checking for iconv_open() in -liconv... no
+checking for libiconv_open() in -liconv... no
+checking for libiconv_open() in -llibiconv... no
+checking for iconv_open() in -llibiconv... no
+checking for iconv_open() in -lc... yes
+checking for xmlParseDoc() in -lxml2... yes
+checking for libxml/xmlversion.h... no
+checking for libxml/xmlversion.h in /opt/include/libxml2,/usr/local/include/libxml2,/usr/include/libxml2... yes
+checking for rb_io_bufwrite() in ruby/io.h... yes
+creating extconf.h
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling ruby_xml_attr.c
+compiling ruby_xml.c
+ruby_xml.c: In function ‘rxml_default_tree_indent_string_set’:
+ruby_xml.c:612:23: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   xmlTreeIndentString = xmlStrdup((xmlChar *)StringValuePtr(string));
+                       ^
+compiling ruby_xml_dtd.c
+compiling ruby_xml_namespaces.c
+compiling ruby_xml_sax2_handler.c
+ruby_xml_sax2_handler.c: In function ‘end_element_ns_callback’:
+ruby_xml_sax2_handler.c:82:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       name = rxml_new_cstr(xprefix, NULL);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_sax2_handler.c:84:25: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+       rb_str_cat2(name, xlocalname); 
+                         ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:861:40: note: in definition of macro ‘rb_str_cat_cstr’
+  rb_str_cat((str), (ptr), (long)strlen(ptr)) : \
+                                        ^
+ruby_xml_sax2_handler.c:84:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/defines.h:45:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:29,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+/usr/include/string.h:398:15: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ extern size_t strlen (const char *__s)
+               ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:861:20: warning: pointer targets in passing argument 2 of ‘rb_str_cat’ differ in signedness [-Wpointer-sign]
+  rb_str_cat((str), (ptr), (long)strlen(ptr)) : \
+                    ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:880:21: note: in expansion of macro ‘rb_str_cat_cstr’
+ #define rb_str_cat2 rb_str_cat_cstr
+                     ^
+ruby_xml_sax2_handler.c:84:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:756:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rb_str_cat(VALUE, const char*, long);
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:862:25: warning: pointer targets in passing argument 2 of ‘rb_str_cat_cstr’ differ in signedness [-Wpointer-sign]
+  rb_str_cat_cstr((str), (ptr));  \
+                         ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:880:21: note: in expansion of macro ‘rb_str_cat_cstr’
+ #define rb_str_cat2 rb_str_cat_cstr
+                     ^
+ruby_xml_sax2_handler.c:84:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:757:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rb_str_cat_cstr(VALUE, const char*);
+       ^
+ruby_xml_sax2_handler.c:88:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       name = rxml_new_cstr(xlocalname, NULL);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:94:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              rxml_new_cstr(xlocalname, NULL),
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:95:38: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              xprefix ? rxml_new_cstr(xprefix, NULL) : Qnil,
+                                      ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:96:35: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              xURI ? rxml_new_cstr(xURI, NULL) : Qnil);
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c: In function ‘start_element_ns_callback’:
+ruby_xml_sax2_handler.c:205:38: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       VALUE attrName = rxml_new_cstr(xattributes[i+0], NULL);
+                                      ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:206:43: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr_len’ differ in signedness [-Wpointer-sign]
+       VALUE attrValue = rxml_new_cstr_len(xattributes[i+3], xattributes[i+4] - xattributes[i+3], NULL);
+                                           ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:12:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr_len(const char* xstr, const int length, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:217:57: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       VALUE nsPrefix = xnamespaces[i+0] ? rxml_new_cstr(xnamespaces[i+0], NULL) : Qnil;
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:218:54: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       VALUE nsURI = xnamespaces[i+1] ? rxml_new_cstr(xnamespaces[i+1], NULL) : Qnil;
+                                                      ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:229:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       name = rxml_new_cstr(xprefix, NULL);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_sax2_handler.c:231:25: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+       rb_str_cat2(name, xlocalname); 
+                         ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:861:40: note: in definition of macro ‘rb_str_cat_cstr’
+  rb_str_cat((str), (ptr), (long)strlen(ptr)) : \
+                                        ^
+ruby_xml_sax2_handler.c:231:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/defines.h:45:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:29,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+/usr/include/string.h:398:15: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ extern size_t strlen (const char *__s)
+               ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_sax2_handler.c:3:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:861:20: warning: pointer targets in passing argument 2 of ‘rb_str_cat’ differ in signedness [-Wpointer-sign]
+  rb_str_cat((str), (ptr), (long)strlen(ptr)) : \
+                    ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:880:21: note: in expansion of macro ‘rb_str_cat_cstr’
+ #define rb_str_cat2 rb_str_cat_cstr
+                     ^
+ruby_xml_sax2_handler.c:231:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:756:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rb_str_cat(VALUE, const char*, long);
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:862:25: warning: pointer targets in passing argument 2 of ‘rb_str_cat_cstr’ differ in signedness [-Wpointer-sign]
+  rb_str_cat_cstr((str), (ptr));  \
+                         ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:880:21: note: in expansion of macro ‘rb_str_cat_cstr’
+ #define rb_str_cat2 rb_str_cat_cstr
+                     ^
+ruby_xml_sax2_handler.c:231:7: note: in expansion of macro ‘rb_str_cat2’
+       rb_str_cat2(name, xlocalname); 
+       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:757:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rb_str_cat_cstr(VALUE, const char*);
+       ^
+ruby_xml_sax2_handler.c:235:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       name = rxml_new_cstr(xlocalname, NULL);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:241:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              rxml_new_cstr(xlocalname, NULL),
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:243:38: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              xprefix ? rxml_new_cstr(xprefix, NULL) : Qnil,
+                                      ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_sax2_handler.c:244:35: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+              xURI ? rxml_new_cstr(xURI, NULL) : Qnil,
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_sax2_handler.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_xpointer.c
+compiling ruby_xml_schema_facet.c
+compiling ruby_xml_schema.c
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_schema.c:1:
+ruby_xml_schema.c: In function ‘storeType’:
+ruby_xml_schema.c:210:35: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+   rb_hash_aset(types, rb_str_new2(name), rtype);
+                                   ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:802:40: note: in definition of macro ‘rb_str_new_cstr’
+  rb_str_new_static((str), (long)strlen(str)) : \
+                                        ^
+ruby_xml_schema.c:210:23: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(types, rb_str_new2(name), rtype);
+                       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/defines.h:45:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:29,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_schema.c:1:
+/usr/include/string.h:398:15: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ extern size_t strlen (const char *__s)
+               ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_schema.c:1:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:802:20: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+  rb_str_new_static((str), (long)strlen(str)) : \
+                    ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:871:21: note: in expansion of macro ‘rb_str_new_cstr’
+ #define rb_str_new2 rb_str_new_cstr
+                     ^
+ruby_xml_schema.c:210:23: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(types, rb_str_new2(name), rtype);
+                       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:727:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+ruby_xml_schema.c:210:35: warning: pointer targets in passing argument 1 of ‘rb_str_new_cstr’ differ in signedness [-Wpointer-sign]
+   rb_hash_aset(types, rb_str_new2(name), rtype);
+                                   ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:803:18: note: in definition of macro ‘rb_str_new_cstr’
+  rb_str_new_cstr(str);   \
+                  ^
+ruby_xml_schema.c:210:23: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(types, rb_str_new2(name), rtype);
+                       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:707:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_str_new_cstr(const char*);
+       ^
+ruby_xml_schema.c: In function ‘storeElement’:
+ruby_xml_schema.c:240:38: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+   rb_hash_aset(elements, rb_str_new2(name), relement);
+                                      ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:802:40: note: in definition of macro ‘rb_str_new_cstr’
+  rb_str_new_static((str), (long)strlen(str)) : \
+                                        ^
+ruby_xml_schema.c:240:26: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(elements, rb_str_new2(name), relement);
+                          ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/defines.h:45:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:29,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_schema.c:1:
+/usr/include/string.h:398:15: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ extern size_t strlen (const char *__s)
+               ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:1710:0,
+                 from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_schema.c:1:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:802:20: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+  rb_str_new_static((str), (long)strlen(str)) : \
+                    ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:871:21: note: in expansion of macro ‘rb_str_new_cstr’
+ #define rb_str_new2 rb_str_new_cstr
+                     ^
+ruby_xml_schema.c:240:26: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(elements, rb_str_new2(name), relement);
+                          ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:727:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+ruby_xml_schema.c:240:38: warning: pointer targets in passing argument 1 of ‘rb_str_new_cstr’ differ in signedness [-Wpointer-sign]
+   rb_hash_aset(elements, rb_str_new2(name), relement);
+                                      ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:803:18: note: in definition of macro ‘rb_str_new_cstr’
+  rb_str_new_cstr(str);   \
+                  ^
+ruby_xml_schema.c:240:26: note: in expansion of macro ‘rb_str_new2’
+   rb_hash_aset(elements, rb_str_new2(name), relement);
+                          ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/intern.h:707:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_str_new_cstr(const char*);
+       ^
+compiling ruby_xml_xpath_expression.c
+compiling ruby_xml_reader.c
+ruby_xml_reader.c: In function ‘rxml_reader_read_inner_xml’:
+ruby_xml_reader.c:531:47: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr((const char*) xml, xencoding);
+                                               ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_read_outer_xml’:
+ruby_xml_reader.c:557:47: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr((const char*) xml, xencoding);
+                                               ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_read_string’:
+ruby_xml_reader.c:595:47: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr((const char*) xml, xencoding);
+                                               ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_name’:
+ruby_xml_reader.c:661:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:661:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_local_name’:
+ruby_xml_reader.c:676:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:676:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33:0,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_reader.c:4:
+ruby_xml_reader.c: In function ‘rxml_reader_encoding’:
+ruby_xml_reader.c:712:41: warning: pointer targets in passing argument 1 of ‘xmlParseCharEncoding’ differ in signedness [-Wpointer-sign]
+     return INT2NUM(xmlParseCharEncoding(xencoding));
+                                         ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:234:30: note: in definition of macro ‘INT2FIX’
+ #define INT2FIX(i) (((VALUE)(i))<<1 | FIXNUM_FLAG)
+                              ^
+ruby_xml_reader.c:712:12: note: in expansion of macro ‘INT2NUM’
+     return INT2NUM(xmlParseCharEncoding(xencoding));
+            ^
+In file included from /usr/include/libxml2/libxml/parser.h:810:0,
+                 from ruby_libxml.h:7,
+                 from ruby_xml_reader.c:4:
+/usr/include/libxml2/libxml/encoding.h:194:2: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+  xmlParseCharEncoding  (const char *name);
+  ^
+ruby_xml_reader.c: In function ‘rxml_reader_base_uri’:
+ruby_xml_reader.c:729:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:729:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_namespace_uri’:
+ruby_xml_reader.c:744:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:744:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_value’:
+ruby_xml_reader.c:759:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:759:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_prefix’:
+ruby_xml_reader.c:774:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:774:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_xml_lang’:
+ruby_xml_reader.c:830:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:830:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_xml_version’:
+ruby_xml_reader.c:845:49: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:845:57: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return (result == NULL ? Qnil : rxml_new_cstr(result, xencoding));
+                                                         ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_attribute’:
+ruby_xml_reader.c:898:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:898:35: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_get_attribute’:
+ruby_xml_reader.c:922:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:922:35: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_get_attribute_no’:
+ruby_xml_reader.c:945:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:945:35: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c: In function ‘rxml_reader_get_attribute_ns’:
+ruby_xml_reader.c:963:28: warning: pointer targets in passing argument 1 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_reader.c:963:35: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     result = rxml_new_cstr(xattr, xencoding);
+                                   ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_reader.c:4:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_xpath.c
+ruby_xml_xpath.c: In function ‘rxml_xpath_to_value’:
+ruby_xml_xpath.c:108:63: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       result = rxml_new_cstr((const char*)xobject->stringval, xctxt->doc->encoding);
+                                                               ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_xpath.c:78:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_parser.c
+compiling ruby_xml_parser_options.c
+compiling ruby_xml_document.c
+ruby_xml_document.c: In function ‘rxml_document_canonicalize’:
+ruby_xml_document.c:199:7: warning: variable ‘length’ set but not used [-Wunused-but-set-variable]
+   int length;
+       ^
+ruby_xml_document.c: In function ‘rxml_document_root_set’:
+ruby_xml_document.c:756:14: warning: variable ‘xroot’ set but not used [-Wunused-but-set-variable]
+   xmlNodePtr xroot, xnode;
+              ^
+ruby_xml_document.c: In function ‘rxml_document_save’:
+ruby_xml_document.c:804:13: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   xencoding = xdoc->encoding;
+             ^
+compiling ruby_xml_cbg.c
+compiling ruby_xml_html_parser.c
+compiling ruby_xml_attributes.c
+compiling ruby_xml_node.c
+compiling ruby_xml_html_parser_context.c
+ruby_xml_html_parser_context.c: In function ‘rxml_html_parser_context_options_set’:
+ruby_xml_html_parser_context.c:307:7: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   int result;
+       ^
+compiling ruby_xml_relaxng.c
+compiling ruby_xml_schema_attribute.c
+compiling ruby_xml_error.c
+compiling ruby_xml_xpath_context.c
+ruby_xml_xpath_context.c: In function ‘rxml_xpath_context_register_namespaces_from_node’:
+ruby_xml_xpath_context.c:162:64: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+         VALUE prefix = rxml_new_cstr((const char*)xns->prefix, xctxt->doc->encoding);
+                                                                ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_xpath_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_xpath_context.c:163:59: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+         VALUE uri = rxml_new_cstr((const char*)xns->href, xctxt->doc->encoding);
+                                                           ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_xpath_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_xpath_context.c: In function ‘rxml_xpath_context_register_namespaces’:
+ruby_xml_xpath_context.c:218:36: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       ruri = rxml_new_cstr(&cp[1], xctxt->doc->encoding);
+                                    ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_xpath_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_html_parser_options.c
+compiling ruby_xml_encoding.c
+compiling ruby_xml_xpath_object.c
+ruby_xml_xpath_object.c: In function ‘rxml_xpath_object_string’:
+ruby_xml_xpath_object.c:297:62: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+   return rxml_new_cstr((const char*) rxpop->xpop->stringval, rxpop->xdoc->encoding);
+                                                              ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_xpath_object.c:1:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_parser_context.c
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_document’:
+ruby_xml_parser_context.c:53:53: warning: pointer targets in passing argument 4 of ‘xmlDocDumpFormatMemoryEnc’ differ in signedness [-Wpointer-sign]
+   xmlDocDumpFormatMemoryEnc(xdoc, &buffer, &length, xdoc->encoding, 0);
+                                                     ^
+In file included from /usr/include/libxml2/libxml/parser.h:16:0,
+                 from ruby_libxml.h:7,
+                 from ruby_xml_parser_context.c:3:
+/usr/include/libxml2/libxml/tree.h:1169:3: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+   xmlDocDumpFormatMemoryEnc(xmlDocPtr out_doc,
+   ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_base_uri_get’:
+ruby_xml_parser_context.c:191:49: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return rxml_new_cstr(ctxt->input->filename, ctxt->encoding);
+                                                 ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33:0,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_base_uri_set’:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:541:27: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+ #define StringValuePtr(v) rb_string_value_ptr(&(v))
+                           ^
+ruby_xml_parser_context.c:211:28: note: in expansion of macro ‘StringValuePtr’
+     const xmlChar * xurl = StringValuePtr(url);
+                            ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_data_directory_get’:
+ruby_xml_parser_context.c:252:44: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr(ctxt->directory, ctxt->encoding));
+                                            ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+In file included from /home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby.h:33:0,
+                 from ruby_libxml.h:6,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_encoding_get’:
+ruby_xml_parser_context.c:356:39: warning: pointer targets in passing argument 1 of ‘xmlParseCharEncoding’ differ in signedness [-Wpointer-sign]
+   return INT2NUM(xmlParseCharEncoding(ctxt->encoding));
+                                       ^
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/ruby.h:234:30: note: in definition of macro ‘INT2FIX’
+ #define INT2FIX(i) (((VALUE)(i))<<1 | FIXNUM_FLAG)
+                              ^
+ruby_xml_parser_context.c:356:10: note: in expansion of macro ‘INT2NUM’
+   return INT2NUM(xmlParseCharEncoding(ctxt->encoding));
+          ^
+In file included from /usr/include/libxml2/libxml/parser.h:810:0,
+                 from ruby_libxml.h:7,
+                 from ruby_xml_parser_context.c:3:
+/usr/include/libxml2/libxml/encoding.h:194:2: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+  xmlParseCharEncoding  (const char *name);
+  ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_name_node_get’:
+ruby_xml_parser_context.c:510:53: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr((const char*) ctxt->name, ctxt->encoding));
+                                                     ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_name_tab_get’:
+ruby_xml_parser_context.c:537:74: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+       rb_ary_push(tab_ary, rxml_new_cstr((const char*) ctxt->nameTab[i], ctxt->encoding));
+                                                                          ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_options_set’:
+ruby_xml_parser_context.c:629:7: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   int result;
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_subset_name_get’:
+ruby_xml_parser_context.c:803:59: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr((const char*) ctxt->intSubName, ctxt->encoding));
+                                                           ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_subset_external_uri_get’:
+ruby_xml_parser_context.c:822:58: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr((const char*) ctxt->extSubURI, ctxt->encoding));
+                                                          ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_subset_external_system_id_get’:
+ruby_xml_parser_context.c:841:61: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr((const char*) ctxt->extSubSystem, ctxt->encoding));
+                                                             ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+ruby_xml_parser_context.c: In function ‘rxml_parser_context_version_get’:
+ruby_xml_parser_context.c:926:56: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return (rxml_new_cstr((const char*) ctxt->version, ctxt->encoding));
+                                                        ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_parser_context.c:3:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_schema_element.c
+compiling ruby_xml_namespace.c
+compiling ruby_xml_attr_decl.c
+ruby_xml_attr_decl.c: In function ‘rxml_attr_decl_name_get’:
+ruby_xml_attr_decl.c:57:53: warning: pointer targets in passing argument 2 of ‘rxml_new_cstr’ differ in signedness [-Wpointer-sign]
+     return rxml_new_cstr((const char*) xattr->name, xattr->doc->encoding);
+                                                     ^
+In file included from ruby_libxml.h:43:0,
+                 from ruby_xml_attr_decl.c:12:
+ruby_xml_encoding.h:11:7: note: expected ‘const char *’ but argument is of type ‘const xmlChar * {aka const unsigned char *}’
+ VALUE rxml_new_cstr(const char* xstr, const char* xencoding);
+       ^
+compiling ruby_xml_io.c
+ruby_xml_io.c: In function ‘rxml_write_callback’:
+ruby_xml_io.c:40:10: warning: implicit declaration of function ‘rb_io_bufwrite’ [-Wimplicit-function-declaration]
+   return rb_io_bufwrite((VALUE) context, buffer, (size_t) len);
+          ^
+compiling ruby_xml_schema_type.c
+compiling ruby_xml_xinclude.c
+compiling libxml.c
+compiling ruby_xml_sax_parser.c
+compiling ruby_xml_input_cbg.c
+compiling ruby_xml_writer.c
+ruby_xml_writer.c: In function ‘rxml_writer_flush’:
+ruby_xml_writer.c:260:48: warning: pointer targets in passing argument 1 of ‘rb_external_str_new_with_enc’ differ in signedness [-Wpointer-sign]
+         content = rb_external_str_new_with_enc(rwo->buffer->content, rwo->buffer->use, rwo->encoding);
+                                                ^
+In file included from ruby_libxml.h:26:0,
+                 from ruby_xml_writer.c:1:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/encoding.h:104:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_external_str_new_with_enc(const char *ptr, long len, rb_encoding *);
+       ^
+ruby_xml_writer.c: In function ‘rxml_writer_result’:
+ruby_xml_writer.c:288:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (-1 == (ret = xmlTextWriterFlush(rwo->writer))) {
+            ^
+ruby_xml_writer.c:296:48: warning: pointer targets in passing argument 1 of ‘rb_external_str_new_with_enc’ differ in signedness [-Wpointer-sign]
+             ret = rxml_writer_c_to_ruby_string(rwo->buffer->content, rwo->buffer->use);
+                                                ^
+ruby_xml_writer.c:43:34: note: in definition of macro ‘rxml_writer_c_to_ruby_string’
+     rb_external_str_new_with_enc(string, string_len, rb_utf8_encoding())
+                                  ^
+In file included from ruby_libxml.h:26:0,
+                 from ruby_xml_writer.c:1:
+/home/dihan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby/encoding.h:104:7: note: expected ‘const char *’ but argument is of type ‘xmlChar * {aka unsigned char *}’
+ VALUE rb_external_str_new_with_enc(const char *ptr, long len, rb_encoding *);
+       ^
+ruby_xml_writer.c: In function ‘numeric_rxml_writer_va_strings’:
+ruby_xml_writer.c:348:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (argc = 0; argc < strings_count; argc++) {
+                         ^
+linking shared-object libxml_ruby.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 libxml_ruby.so ./.gem.20160608-26291-1ll59kt

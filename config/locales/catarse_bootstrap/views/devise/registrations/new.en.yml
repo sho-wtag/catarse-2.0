@@ -13,6 +13,7 @@ en:
             show_password: 'Show password'
             name: 'Name'
             password: 'Password'
+            repassword: 'Re-Enter Password'
             newsletter: 'I want to subscribe to Catarse newsletter'
           hint:
             password_length: 'Must be at least 6 characters.'

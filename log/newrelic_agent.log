@@ -207,3 +207,318 @@
 [06/08/16 22:34:12 +0600 dihan-A960G (4243)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
 [06/08/16 22:34:27 +0600 dihan-A960G (4243)] ERROR : Invalid license key, please contact support@newrelic.com
 [06/08/16 22:34:27 +0600 dihan-A960G (4243)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Environment: development
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : No known dispatcher detected.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Application: (Development)
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing HTTPClient instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Sidekiq instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Curb instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing deferred Rack instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Net instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Finished instrumentation
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 00:09:40 +0600 dihan-A960G (7864)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Environment: development
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : No known dispatcher detected.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Application: (Development)
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing HTTPClient instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Sidekiq instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Curb instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing deferred Rack instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Net instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Finished instrumentation
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 00:10:19 +0600 dihan-A960G (7922)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 00:10:43 +0600 dihan-A960G (4243)] INFO : Starting Agent shutdown
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Environment: development
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : No known dispatcher detected.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Application: (Development)
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing HTTPClient instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Sidekiq instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Curb instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing deferred Rack instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Net instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Finished instrumentation
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 00:10:58 +0600 dihan-A960G (8101)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 00:11:05 +0600 dihan-A960G (8101)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 00:11:05 +0600 dihan-A960G (8101)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 00:14:49 +0600 dihan-A960G (8101)] INFO : Starting Agent shutdown
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Environment: development
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : No known dispatcher detected.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Application: (Development)
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing HTTPClient instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Sidekiq instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Curb instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing deferred Rack instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Net instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Finished instrumentation
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 00:15:35 +0600 dihan-A960G (8362)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 00:15:47 +0600 dihan-A960G (8362)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 00:15:47 +0600 dihan-A960G (8362)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 02:48:50 +0600 dihan-A960G (8362)] INFO : Starting Agent shutdown
+[06/09/16 11:50:48 +0600 dihan-A960G (4494)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 11:50:48 +0600 dihan-A960G (4494)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 11:50:48 +0600 dihan-A960G (4494)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 11:50:48 +0600 dihan-A960G (4494)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Environment: development
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : No known dispatcher detected.
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Application: (Development)
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing HTTPClient instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Sidekiq instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Curb instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing deferred Rack instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Net instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 11:50:49 +0600 dihan-A960G (4494)] INFO : Finished instrumentation
+[06/09/16 11:50:50 +0600 dihan-A960G (4494)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 11:50:50 +0600 dihan-A960G (4494)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 11:50:50 +0600 dihan-A960G (4494)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 11:50:58 +0600 dihan-A960G (4494)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 11:50:58 +0600 dihan-A960G (4494)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 13:04:29 +0600 dihan-A960G (4494)] INFO : Starting Agent shutdown
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Environment: development
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : No known dispatcher detected.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Application: (Development)
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing HTTPClient instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Sidekiq instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Curb instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing deferred Rack instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Net instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Finished instrumentation
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 13:04:37 +0600 dihan-A960G (6961)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 13:04:47 +0600 dihan-A960G (6961)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 13:04:47 +0600 dihan-A960G (6961)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 13:06:03 +0600 dihan-A960G (6961)] INFO : Starting Agent shutdown
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Environment: development
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : No known dispatcher detected.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Application: (Development)
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing HTTPClient instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Sidekiq instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Curb instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing deferred Rack instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Net instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Finished instrumentation
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 13:06:11 +0600 dihan-A960G (7024)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 13:06:20 +0600 dihan-A960G (7024)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 13:06:20 +0600 dihan-A960G (7024)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 13:32:14 +0600 dihan-A960G (7024)] INFO : Starting Agent shutdown
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Environment: development
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : No known dispatcher detected.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Application: (Development)
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing HTTPClient instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Sidekiq instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Curb instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing deferred Rack instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Net instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Finished instrumentation
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 13:32:23 +0600 dihan-A960G (7654)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Environment: development
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : No known dispatcher detected.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Application: (Development)
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing HTTPClient instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Sidekiq instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Curb instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing deferred Rack instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Net instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Finished instrumentation
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 13:34:41 +0600 dihan-A960G (7758)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 13:34:52 +0600 dihan-A960G (7758)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 13:34:52 +0600 dihan-A960G (7758)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 13:41:07 +0600 dihan-A960G (7758)] INFO : Starting Agent shutdown
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Environment: development
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : No known dispatcher detected.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Application: (Development)
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing HTTPClient instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Sidekiq instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Curb instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing deferred Rack instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Net instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Finished instrumentation
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 13:41:16 +0600 dihan-A960G (8026)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 13:41:20 +0600 dihan-A960G (8026)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 13:41:20 +0600 dihan-A960G (8026)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 14:07:23 +0600 dihan-A960G (8026)] INFO : Starting Agent shutdown
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Environment: development
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : No known dispatcher detected.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Application: (Development)
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing HTTPClient instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Sidekiq instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Curb instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing deferred Rack instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Net instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Finished instrumentation
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 14:07:31 +0600 dihan-A960G (8841)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 14:07:44 +0600 dihan-A960G (8841)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 14:07:44 +0600 dihan-A960G (8841)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[06/09/16 14:08:22 +0600 dihan-A960G (8841)] INFO : Starting Agent shutdown
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Starting the New Relic agent in "development" environment.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Reading configuration from config/newrelic.yml (/home/dihan/project/catarse-2.0)
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : New Relic Agent Developer Mode enabled.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Environment: development
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : No known dispatcher detected.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Application: (Development)
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing ActiveRecord 4 instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing HTTPClient instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Rails 3+ middleware instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Sidekiq instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing middleware-based Excon instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Curb instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing deferred Rack instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Rack::Builder middleware instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Net instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Rails 4 view instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Rails 4 Error instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Installing Rails 4 Controller instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Finished instrumentation
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : Doing deferred dependency-detection before Rack startup
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : We weren't able to instrument all of your Rack middlewares.
+[06/09/16 14:08:30 +0600 dihan-A960G (8935)] INFO : To correct this, ensure you 'require "newrelic_rpm"' before setting up your middleware stack.
+[06/09/16 14:08:38 +0600 dihan-A960G (8935)] ERROR : Invalid license key, please contact support@newrelic.com
+[06/09/16 14:08:38 +0600 dihan-A960G (8935)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

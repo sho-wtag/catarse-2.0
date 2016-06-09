@@ -21,6 +21,7 @@
             = form.input_field :show_password, as: :boolean, boolean_style: :inline, class: 'checkbox-fix', checked: false
             label.w-form-label.fontsize-smallest= t('.form.labels.show_password')
           = form.input :password, as: :password, label: t('.form.labels.password'), input_html: { class: 'w-input text-field' }
+          = form.input :password_confirmation, as: :password, label: t('.form.labels.repassword'), input_html: { class: 'w-input text-field' }
           .u-marginbottom-10
             = form.input_field :newsletter, as: :boolean, boolean_style: :inline, class: 'checkbox-fix', checked: true
             label.w-form-label.fontsize-smallest= t('.form.labels.newsletter')

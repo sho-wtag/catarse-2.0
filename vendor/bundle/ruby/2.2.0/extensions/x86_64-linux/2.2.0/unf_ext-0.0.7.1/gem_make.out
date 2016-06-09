@@ -1,0 +1,12 @@
+/home/dihan/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160608-26291-19bvhq0.rb extconf.rb
+checking for main() in -lstdc++... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20160608-26291-ovuavb

@@ -1,0 +1,11 @@
+*.*~
+*.swp
+.bundle
+.rvmrc
+.rbx
+.irbrc
+.svn
+pkg
+vendor
+Gemfile.lock
+*.gem

@@ -46,11 +46,11 @@
             = @project.decorate.status_icon_for('user_about')
             | &nbsp;&nbsp;
             = t('.about_you_tab')
-          - if @project.can_show_account_link? || (current_user && current_user.admin?)
-            = link_to '#user_settings', id: 'dashboard_user_settings_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_user_settings', tab_group: 'edit'} do
-              = @project.decorate.status_icon_for('user_settings')
-              | &nbsp;&nbsp;
-              = t('.account_tab')
+          /- if @project.can_show_account_link? || (current_user && current_user.admin?)
+          /  = link_to '#user_settings', id: 'dashboard_user_settings_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_user_settings', tab_group: 'edit'} do
+          /    = @project.decorate.status_icon_for('user_settings')
+          /    | &nbsp;&nbsp;
+          /    = t('.account_tab')
         - if @project.draft? || @project.approved? || @project.rejected? || @project.in_analysis?
           .w-col.w-col-3.w-clearfix.col-btn-send-draft
             - if @project.can_show_preview_link?
@@ -89,7 +89,7 @@
             = render 'dashboard_user_about'
           #dashboard_preview.content.w-hidden
             = render 'dashboard_preview'
-          #dashboard_user_settings.content.w-hidden
-            = render 'dashboard_user_settings'
+          /#dashboard_user_settings.content.w-hidden
+          /  = render 'dashboard_user_settings'
   
 = render 'shared/footer'
