@@ -40241,3 +40241,87 @@ Started GET "/assets/catarse_bootstrap/icon-newsletter.png" for 127.0.0.1 at 201
 
 
 Started GET "/assets/logo-footer.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.6ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (0.7ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[35mOauthProvider Load (0.4ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.6ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.7ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"   ORDER BY version[0m
+  [1m[36mCatarseSettingsDb::Setting Load (0.8ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (0.9ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[35mOauthProvider Load (0.5ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.6ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.8ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
