@@ -137,7 +137,6 @@
     <orderEntry type="library" scope="PROVIDED" name="catarse_api (v0.0.2@eb9eb3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="moip (v1.0.2@c0225a, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redactor-rails (v0.5.0@e79c3b, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" name="compass-library" level="project" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

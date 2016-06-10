@@ -39517,3 +39517,727 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-10 04:15:49
 
 
 Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-10 04:15:49 +0600
+  [1m[36mCatarseSettingsDb::Setting Load (67.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_uri' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.6ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'moip_test' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.7ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_id' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'google_api_secret' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (23.7ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mOauthProvider Load (105.0ms)[0m  [1mSELECT "oauth_providers".* FROM "oauth_providers"[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.6ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_api_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_list_id' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_successful_projects_list' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'mailchimp_failed_projects_list' LIMIT 1[0m
+  [1m[35mOauthProvider Load (0.6ms)[0m  SELECT "oauth_providers".* FROM "oauth_providers"
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_api_key' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_encryption_key' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_slip_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_credit_card_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_interest_rate' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_cents_fee' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'host' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_max_installments' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'pagarme_minimum_value_for_installment' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'stone_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.2ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_diners_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_diners_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_amex_tax' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.2ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'cielo_installment_not_amex_tax' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_token' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'secret_key_base' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.6ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_system' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'email_contact' LIMIT 1[0m
+  [1m[35mCatarseSettingsDb::Setting Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'company_name' LIMIT 1
+  [1m[36mCatarseSettingsDb::Setting Load (0.7ms)[0m  [1mSELECT  "settings".* FROM "settings"  WHERE "settings"."name" = 'aws_access_key' LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-10 14:12:15 +0600
+  [1m[35mActiveRecord::SchemaMigration Load (51.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ProjectsController#index as HTML
+  Rendered catarse_bootstrap/shared/_header.html.slim (25.5ms)
+  Rendered catarse_bootstrap/shared/_header_big.html.slim (65.8ms)
+  [1m[36mProjectsForHome Load (206.2ms)[0m  [1mSELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recommended'[0m
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  [1m[35mProjectsForHome Load (2.8ms)[0m  SELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'expiring'
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  [1m[36mProjectsForHome Load (2.6ms)[0m  [1mSELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recents'[0m
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  Rendered catarse_bootstrap/shared/_footer_welcome.html.slim (23.4ms)
+  Rendered catarse_bootstrap/shared/_footer_about.html.slim (14.4ms)
+  Rendered catarse_bootstrap/shared/_footer_navigate.html.slim (14.3ms)
+  Rendered catarse_bootstrap/shared/_newsletter.html.slim (5.2ms)
+  Rendered layouts/_facebook_like.html.slim (7.7ms)
+  Rendered catarse_bootstrap/shared/_footer_big.html.slim (95.6ms)
+  Rendered catarse_bootstrap/projects/index.html.slim within layouts/catarse_bootstrap (6309.7ms)
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (8.9ms)
+  Rendered layouts/_facebook_sdk.html.slim (5.3ms)
+Completed 200 OK in 7001ms (Views: 6721.7ms | ActiveRecord: 232.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+Processing by ProjectsController#index as HTML
+  Rendered catarse_bootstrap/shared/_header.html.slim (1.7ms)
+  Rendered catarse_bootstrap/shared/_header_big.html.slim (5.8ms)
+  [1m[35mProjectsForHome Load (2.4ms)[0m  SELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recommended'
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  [1m[36mProjectsForHome Load (3.1ms)[0m  [1mSELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'expiring'[0m
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  [1m[35mProjectsForHome Load (3.3ms)[0m  SELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recents'
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  Rendered catarse_bootstrap/shared/_footer_welcome.html.slim (1.6ms)
+  Rendered catarse_bootstrap/shared/_footer_about.html.slim (1.7ms)
+  Rendered catarse_bootstrap/shared/_footer_navigate.html.slim (2.0ms)
+  Rendered catarse_bootstrap/shared/_newsletter.html.slim (1.4ms)
+  Rendered layouts/_facebook_like.html.slim (0.5ms)
+  Rendered catarse_bootstrap/shared/_footer_big.html.slim (13.4ms)
+  Rendered catarse_bootstrap/projects/index.html.slim within layouts/catarse_bootstrap (43.2ms)
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (0.6ms)
+  Rendered layouts/_facebook_sdk.html.slim (0.5ms)
+Completed 200 OK in 71ms (Views: 59.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/catarse_bootstrap/fonts.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+
+
+Started GET "/assets/catarse_bootstrap/catarse.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+
+
+Started GET "/assets/jquery/dist/jquery.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+
+
+Started GET "/assets/backbone/backbone.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+
+
+Started GET "/assets/underscore/underscore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:23 +0600
+
+
+Started GET "/assets/jquery.fixedmask/dist/jquery.fixedmask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery-ujs/src/rails.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery-sticky/jquery.sticky.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jQuery-Mask-Plugin/dist/jquery.mask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/catarse_bootstrap/lupa.png" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/hero-new-home.jpg" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/catarse_bootstrap/logo_big.png" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery-smooth-scroll/jquery.smooth-scroll.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/store/dist/store2.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery-typewatch/jquery.typewatch.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/jquery.elastic.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/skull.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/jquery.brbanks.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/jquery.payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/jquery.headline.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/modal.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/pagination.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/show_password_confirmation_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/show_password_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/tabs.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:24 +0600
+
+
+Started GET "/assets/lib/twitter.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/lib/ui_helper.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/admin/admin.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/admin/admin_sort.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/contribution/contribution.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/contribution/contribution_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/contribution/contribution_payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/guides.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/explore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/contribution/contribution_review.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/hello.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/home.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/how_it_works.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/registration.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/reset_password.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/pages/search.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_contributions.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_comments.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_reward.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_metrics.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_posts.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/project/project_sidebar.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/user/user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:25 +0600
+
+
+Started GET "/assets/app/user/user_document.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/app/user/user_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/app/user/user_menu.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/app/utils/mix_panel.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/catarse_bootstrap/loader.gif" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/icon-blog.png" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/catarse_bootstrap/icon-newsletter.png" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/assets/logo-footer.png" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+
+
+Started GET "/pt/login" for 127.0.0.1 at 2016-06-10 14:12:26 +0600
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"pt"}
+  Rendered catarse_bootstrap/devise/shared/_header.html.slim (8.7ms)
+  Rendered catarse_bootstrap/devise/shared/_alert.html.slim (13.3ms)
+  Rendered catarse_bootstrap/devise/sessions/new.html.slim within layouts/catarse_bootstrap (196.7ms)
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (0.8ms)
+  Rendered layouts/_facebook_sdk.html.slim (0.5ms)
+Completed 200 OK in 289ms (Views: 241.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/catarse_bootstrap/fonts.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/catarse_bootstrap/catarse.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jquery/dist/jquery.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/underscore/underscore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/backbone/backbone.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jquery.fixedmask/dist/jquery.fixedmask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jquery-ujs/src/rails.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jQuery-Mask-Plugin/dist/jquery.mask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/catarse_bootstrap/logo_icon_catarse.png" for 127.0.0.1 at 2016-06-10 14:12:27 +0600
+
+
+Started GET "/assets/jquery-sticky/jquery.sticky.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/jquery-smooth-scroll/jquery.smooth-scroll.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/jquery-typewatch/jquery.typewatch.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/store/dist/store2.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/jquery.elastic.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/skull.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/jquery.brbanks.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/jquery.headline.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/jquery.payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/modal.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/pagination.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/show_password_confirmation_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/show_password_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/tabs.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/twitter.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/lib/ui_helper.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/admin/admin.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/admin/admin_sort.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/contribution/contribution.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/contribution/contribution_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/contribution/contribution_payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:28 +0600
+
+
+Started GET "/assets/app/contribution/contribution_review.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/explore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/guides.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/hello.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/home.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/how_it_works.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/registration.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/reset_password.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/pages/search.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_comments.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_contributions.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_reward.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_metrics.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_posts.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/project/project_sidebar.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/user/user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/user/user_document.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/user/user_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/user/user_menu.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/app/utils/mix_panel.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:29 +0600
+
+
+Started POST "/pt/login" for 127.0.0.1 at 2016-06-10 14:12:38 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bt91h07JuHUQ9NKCQ9PeLfLG8qPiDLzsD5JITvg7G6s=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Fazer login", "locale"=>"pt"}
+  [1m[36mUser Load (109.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'admin@admin.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_created_at", "2016-06-10 08:12:38.590674"], ["updated_at", "2016-06-10 08:12:38.593217"]]
+  [1m[35mProject Exists (0.9ms)[0m  SELECT  1 AS one FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online')) LIMIT 1  [["user_id", 1]]
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2016-06-10 08:12:38.715407"], ["last_sign_in_at", "2016-06-09 20:26:55.195822"], ["sign_in_count", 11], ["updated_at", "2016-06-10 08:12:38.718945"]]
+  [1m[35mProject Exists (0.7ms)[0m  SELECT  1 AS one FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online')) LIMIT 1  [["user_id", 1]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 425ms (ActiveRecord: 141.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-10 14:12:38 +0600
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (41.2ms)[0m  [1mSELECT DISTINCT "projects".* FROM "projects" INNER JOIN "contributions" ON "projects"."id" = "contributions"."project_id" WHERE (contributions.was_confirmed) AND "contributions"."user_id" = $1  ORDER BY projects.created_at DESC[0m  [["user_id", 1]]
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))  [["user_id", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" NOT IN ('rejected'))  ORDER BY "projects"."created_at" DESC LIMIT 3[0m  [["user_id", 1]]
+  Rendered catarse_bootstrap/shared/_user_menu.html.slim (287.7ms)
+  Rendered catarse_bootstrap/shared/_header.html.slim (312.2ms)
+  Rendered catarse_bootstrap/shared/_header_big.html.slim (317.9ms)
+  [1m[35mProject Load (1.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE ("projects"."state" IN ('online')) AND (EXISTS(SELECT true FROM users u WHERE u.id = projects.user_id AND lower(u.address_state) = lower(NULL)))  ORDER BY random() LIMIT 3
+  [1m[36mProjectsForHome Load (3.6ms)[0m  [1mSELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recommended'[0m
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.2ms)
+  [1m[35mProjectsForHome Load (3.4ms)[0m  SELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'expiring'
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  [1m[36mProjectsForHome Load (2.9ms)[0m  [1mSELECT "projects_for_home".* FROM "projects_for_home"  WHERE "projects_for_home"."origin" = 'recents'[0m
+  Rendered catarse_bootstrap/projects/_card.html.slim (0.1ms)
+  Rendered catarse_bootstrap/shared/_footer_welcome.html.slim (2.0ms)
+  Rendered catarse_bootstrap/shared/_footer_about.html.slim (2.5ms)
+  Rendered catarse_bootstrap/shared/_footer_navigate.html.slim (2.4ms)
+  Rendered catarse_bootstrap/shared/_newsletter.html.slim (1.2ms)
+  Rendered layouts/_facebook_like.html.slim (0.5ms)
+  Rendered catarse_bootstrap/shared/_footer_big.html.slim (15.3ms)
+  Rendered catarse_bootstrap/projects/index.html.slim within layouts/catarse_bootstrap (362.9ms)
+  [1m[35mUserTotal Load (0.5ms)[0m  SELECT  "user_totals".* FROM "user_totals"  WHERE "user_totals"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted'))[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" IN ('online','waiting_funds','successful','failed'))  [["user_id", 1]]
+  [1m[36mProject Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "projects"  WHERE "projects"."user_id" = $1 AND ("projects"."state" NOT IN ('deleted')) AND ("projects"."state" IN ('online')) LIMIT 1[0m  [["user_id", 1]]
+  Rendered catarse_bootstrap/layouts/_new_zendesk.html.slim (0.8ms)
+  Rendered layouts/_facebook_sdk.html.slim (0.6ms)
+Completed 200 OK in 497ms (Views: 433.8ms | ActiveRecord: 58.2ms)
+
+
+Started GET "/assets/catarse_bootstrap/fonts.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/catarse_bootstrap/catarse.css?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery/dist/jquery.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/underscore/underscore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/backbone/backbone.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery.fixedmask/dist/jquery.fixedmask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery-ujs/src/rails.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery-ui/jquery-ui.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jQuery-Mask-Plugin/dist/jquery.mask.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery-sticky/jquery.sticky.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery-smooth-scroll/jquery.smooth-scroll.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery-typewatch/jquery.typewatch.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/store/dist/store2.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/jquery.elastic.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:39 +0600
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/skull.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/jquery.brbanks.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/jquery.headline.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/jquery.payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/modal.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/pagination.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/show_password_confirmation_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/show_password_input.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/tabs.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/twitter.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/lib/ui_helper.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/admin/admin.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/admin/admin_sort.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/contribution/contribution.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/contribution/contribution_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/contribution/contribution_payment.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/contribution/contribution_review.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/explore.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/guides.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/hello.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/home.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/how_it_works.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/registration.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/reset_password.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:40 +0600
+
+
+Started GET "/assets/app/pages/search.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_comments.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_reward.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_contributions.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_dashboard_user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_form.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_metrics.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_posts.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/project/project_sidebar.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/user/user.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/user/user_document.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/user/user_edit.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/user/user_menu.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/app/utils/mix_panel.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/hero-new-home.jpg" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/catarse_bootstrap/lupa.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/catarse_bootstrap/logo_big.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/catarse_bootstrap/user.jpg" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/catarse_bootstrap/loader.gif" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/icon-blog.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/catarse_bootstrap/icon-newsletter.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
+
+
+Started GET "/assets/logo-footer.png" for 127.0.0.1 at 2016-06-10 14:12:41 +0600
