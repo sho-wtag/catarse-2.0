@@ -16,7 +16,7 @@
       .w-form
         = simple_form_for resource, as: resource_name, html: {novalidate: true}, url: sign_up_path  do |form|
           = render 'devise/shared/alert'
-          = form.input :name, :label => "Full Name", input_html: { class: 'w-input text-field' }, wrapper_html: { class: 'no-asterisk' }
+          = form.input :name, as: :string ,:label => "Full Name", input_html: { class: 'w-input text-field' }, wrapper_html: { class: 'no-asterisk' }
           = form.input :email, as: :email, wrapper_html: { class: 'no-asterisk' }, input_html: { class: 'w-input text-field' }, required: false
           .u-right
             = form.input_field :show_password, as: :boolean, boolean_style: :inline, class: 'checkbox-fix', checked: false
