@@ -10,7 +10,7 @@ class Reward < ActiveRecord::Base
   has_many :contributions, dependent: :nullify
 
   ranks :row_order, with_same: :project_id
-
+  validates_presence_of :job_title
   validates_presence_of :minimum_value, :description
   validates_numericality_of :minimum_value, greater_than_or_equal_to: 10.00, message: 'Valor deve ser maior ou igual a R$ 10'
   validates_numericality_of :maximum_contributions, only_integer: true, greater_than: 0, allow_nil: true

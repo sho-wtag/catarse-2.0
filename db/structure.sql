@@ -273,7 +273,10 @@ CREATE TABLE projects (
     budget text,
     full_text_index tsvector,
     budget_html text,
-    expires_at timestamp without time zone
+    expires_at timestamp without time zone,
+    job_name character varying(255),
+    job_description text,
+    salary integer
 );
 
 
@@ -293,6 +296,7 @@ CREATE TABLE rewards (
     days_to_delivery integer,
     last_changes text,
     deliver_at timestamp without time zone,
+    job_title character varying(255),
     CONSTRAINT rewards_maximum_backers_positive CHECK ((maximum_contributions >= 0)),
     CONSTRAINT rewards_minimum_value_positive CHECK ((minimum_value >= (0)::numeric))
 );
@@ -4213,4 +4217,12 @@ INSERT INTO schema_migrations (version) VALUES ('20150604143801');
 INSERT INTO schema_migrations (version) VALUES ('20150605153541');
 
 INSERT INTO schema_migrations (version) VALUES ('20150608202210');
+
+INSERT INTO schema_migrations (version) VALUES ('20160615123858');
+
+INSERT INTO schema_migrations (version) VALUES ('20160615124052');
+
+INSERT INTO schema_migrations (version) VALUES ('20160615124911');
+
+INSERT INTO schema_migrations (version) VALUES ('20160616062505');
 

@@ -167,6 +167,7 @@ en:
         traffic_sources: "How did you hear about us?"
         more_links: 'Where can we find more about you and your project?'
       reward:
+        job_title: "Job title"
         description: Description
         maximum_contributions: "Maximum contributions"
         minimum_value: "Minimum value"

@@ -12,8 +12,9 @@ pt:
       submit: "Salvar"
     index:
       select_reward: "Selecione essa recompensa"
-      display_remaining: "%{remaining} de %{maximum} disponíveis"
+      display_remaining: "%{remaining}"
       dont_want: "Não quero recompensa"
+      salary: "Salary: "
       limited: Limitada
       sold_out: Esgotada
       contributions_to_confirm:
@@ -22,4 +23,4 @@ pt:
       edit_reward: Editar recompensa
       new_reward: Cadastrar recompensa
       reward_deliver_time: "<b>Estimativa de Entrega:</b> %{estimate}"
-      reward_title: Para %{minimum} ou mais
+      reward_title: "%{minimum}"

@@ -67,7 +67,7 @@ class ProjectPolicy < ApplicationPolicy
 
   def reward_attributes
     { rewards_attributes: [:_destroy, :id, :maximum_contributions,
-                          :description, :deliver_at, :minimum_value] }
+                          :description, :deliver_at, :minimum_value,:job_title] }
   end
 
   def account_attributes

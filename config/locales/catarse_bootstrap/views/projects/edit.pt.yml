@@ -4,6 +4,7 @@ pt:
       edit: "Editar recompensa"
       reward: Recompensa
       info_box: "Descreva o valor da recompensa e coloque uma previsão de data de entrega real para os apoiadores. Você também pode limitar uma recompensa e quando o limite é atingido ela aparece como ESGOTADA. Se quiser mudar a ordem que as recompensas aparecem em seu projeto, basta fazer isso arrastando-as para cima ou para baixo."
+      job_title: "Job title:"
       minimum_value: "Salary:"
       deliver_at: "Previsão de entrega:"
       description: "Descrição:"
@@ -15,6 +16,7 @@ pt:
         display_remaining: "%{remaining} de %{maximum} disponíveis"
         dont_want: "Não quero recompensa"
         limited: Limitada
+        salary: "Salary: "
         sold_out: Esgotada
         contributions_to_confirm:
           one: 1 apoio em prazo de confirmação.
@@ -125,7 +127,7 @@ pt:
       title: "Crie e edite aqui suas recompensas"
       add_reward: "Adicionar recompensa"
       subtitle: "Essa é sua demonstração de gratidão com os apoiadores. Lembre-se de incluir os custos das recompensas no seu orçamento. Prometeu, ENTREGUE! "
-      reward: "Recompensa"
+      reward: "Job"
     dashboard_preview:
       header_subtitle: "É hora dos feedbacks!"
       header_text: "Compartilhe o link abaixo com seus amigos e aproveite o momento para fazer ajustes finos que ajudem na sua campanha."
