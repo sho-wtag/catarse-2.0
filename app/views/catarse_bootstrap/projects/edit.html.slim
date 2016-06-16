@@ -37,7 +37,7 @@
           = link_to '#reward', id: 'dashboard_reward_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_reward', tab_group: 'edit'} do
             = @project.decorate.status_icon_for('reward')
             | &nbsp;&nbsp;
-            = t('.rewards_tab')
+            = t('.jobs_tab')
           - if @project.published?
             = link_to '#reports', id: 'dashboard_reports_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_reports', tab_group: 'edit'} do
               = t('.reports_tab')

@@ -17,21 +17,21 @@ div[itemtype="http://schema.org/CreativeWork" class="#{defined?(wrapper_class) ?
           = image_tag(@project.user.display_image, class: 'u-round thumb small')
       p.card-author-name.fontsize-smaller[itemprop="name" content="#{@project.user.display_name}"]
           = @project.user.display_name
-    .card-project-meter class=@project.state
-      -if ['successful', 'failed', 'waiting_funds'].include? @project.state
-        div= t("projects.card.display_status.#{@project.display_status}")
-      -else
-        .meter
-          = @project.progress_bar
+    /.card-project-meter class=@project.state
+    /  -if ['successful', 'failed', 'waiting_funds'].include? @project.state
+    /    div= t("projects.card.display_status.#{@project.display_status}")
+    /  -else
+    /    .meter
+    /      = @project.progress_bar
     .card-project-stats
       .w-row
-        .w-col.w-col-4.w-col-small-4.w-col-tiny-4
-          .fontsize-base.fontweight-semibold 
-            = "#{@project.progress}%"
-        .w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-center-small-only
-          .fontsize-smaller.fontweight-semibold 
-            = @project.display_pledged
-          .fontsize-smallest.lineheight-tightest Levantados
+        /.w-col.w-col-4.w-col-small-4.w-col-tiny-4
+        /  .fontsize-base.fontweight-semibold
+        /    = "#{@project.progress}%"
+        /.w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-center-small-only
+        /  .fontsize-smaller.fontweight-semibold
+        /    = @project.display_pledged
+        /  .fontsize-smallest.lineheight-tightest Levantados
         .w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-right
           - unless @project.expired?
             .fontsize-smaller.fontweight-semibold 
