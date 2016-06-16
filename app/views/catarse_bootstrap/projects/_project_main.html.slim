@@ -45,26 +45,26 @@ section.section[itemtype="http://schema.org/CreativeWork"]
 
       #project-sidebar.aside.w-col.w-col-4
         .project-stats
-          .project-stats-numbers.u-marginbottom-20.w-hidden-small.w-hidden-tiny
-            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
-              .fontsize-largest = @project.display_pledged
-              .fontsize-small = t('.sidebar.goal', total: @project.display_goal).html_safe
-            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
-              .fontsize-largest = @project.total_contributions
-              .fontsize-small = t('.sidebar.contributions')
-            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
-              - if @project.draft? || @project.rejected?
-                .fontsize-largest = @project.online_days
-                .fontsize-small #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
-              - else
-                .fontsize-largest = @project.remaining_days
-                .fontsize-small #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+          /.project-stats-numbers.u-marginbottom-20.w-hidden-small.w-hidden-tiny
+            /.w-hidden-small.w-hidden-tiny.u-marginbottom-10
+              /.fontsize-largest = @project.display_pledged
+              /.fontsize-small = t('.sidebar.goal', total: @project.display_goal).html_safe
+            /.w-hidden-small.w-hidden-tiny.u-marginbottom-10
+            /  .fontsize-largest = @project.total_contributions
+            /  .fontsize-small = t('.sidebar.contributions')
+            /.w-hidden-small.w-hidden-tiny.u-marginbottom-10
+            /  - if @project.draft? || @project.rejected?
+            /    .fontsize-largest = @project.online_days
+            /    .fontsize-small #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
+            /  - else
+            /    .fontsize-largest = @project.remaining_days
+            /    .fontsize-small #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
 
-          - if @project.online? && !@project.expired?
-            = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20"
-
-          .fontsize-smaller.u-marginbottom-30[class=@project.display_card_class]
-            = t(".contribute_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
+          /- if @project.online? && !@project.expired?
+          /  = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20"
+          /
+          /.fontsize-smaller.u-marginbottom-30[class=@project.display_card_class]
+          /  = t(".contribute_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
 
         = render 'users/card', resource: @project.user
         .w-hidden-main.w-hidden-medium.project-share
